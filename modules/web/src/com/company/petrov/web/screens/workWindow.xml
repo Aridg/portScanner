@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://caption"
+        class="com.company.petrov.web.screens.Workwindow"
+        messagesPack="com.company.petrov.web.screens">
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="hbox"
+            margin="true"
+            spacing="true">
+        <textField id="urlField"/>
+        <hbox id="hbox"
+              spacing="true"
+              width="100%">
+            <groupBox id="portScannerGB"
+                      caption="Сканирование портов"
+                      spacing="true">
+                <button id="scanPortsBut"
+                        caption="Сканировать порты"
+                        invoke="onScanPortsButClick"/>
+                <textArea id="scanPortsOut"/>
+            </groupBox>
+            <groupBox id="adminsGB"
+                      caption="Системы управления сайтом"
+                      spacing="true">
+                <button id="adminsScanBut"
+                        caption="Найти админки"
+                        invoke="onAdminsScanButClick"/>
+                <textArea id="adminsOut"/>
+            </groupBox>
+            <groupBox id="scriptsGB"
+                      caption="Остаточные скрипты"
+                      spacing="true">
+                <button id="scriptsBut"
+                        caption="Найти остаточные скрипты"
+                        invoke="onScriptsButClick"/>
+                <textArea id="scriptsOut"/>
+            </groupBox>
+        </hbox>
+    </layout>
+</window>
